@@ -1,0 +1,136 @@
+body {
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* .container { */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   padding-top: 30; */
+/* } */
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #fab700;
+
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+
+  --size-bezel: 0.5rem;
+  --size-radius: 4px;
+
+  // line-height: 1.4;
+
+  font-family: "Inter", sans-serif;
+  font-size: calc(0.6rem + 0.4vw);
+  color: var(--color-text);
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  color: var(--color-light);
+}
+
+.input {
+  position: relative;
+  flex: 3;
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * 0.5);
+    margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * 0.5);
+    background: pink;
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: var(--color-background);
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  &__field {
+    color: var(--color-light);
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 3px solid currentColor;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    background: transparent;
+    border-radius: var(--size-radius);
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .input__label {
+        transform: translate(0.25rem, -65%) scale(0.8);
+        color: var(--color-accent);
+      }
+    }
+  }
+}
+
+button {
+  color: currentColor;
+  padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--size-radius);
+  font-weight: 900;
+
+  &[type="reset"] {
+    background: var(--color-background);
+    font-weight: 200;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 100vw;
+  max-height: 25vh;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header__logo {
+  width: 10%;
+  object-fit: fill;
+  // height: 100%;
+}
+
+.header__text {
+  flex: 3;
+  width: 50%;
+  text-align: center;
+}
+
+.controller-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.download-button {
+  flex: 1;
+}
