@@ -45,7 +45,7 @@ function App() {
     context.fillStyle = "white";
 
     //The X coordinate where to start
-    const x = 137;
+    const x = 140;
 
     //The Y coordinate where to start
     const y = 275;
@@ -64,33 +64,55 @@ function App() {
 
   return (
     <div className="container">
-      <div className="header">
-        <img src={distrito} className="header__logo" />
+      <div  className="header">
+      <div>
+            <img src={distrito} className="header__logo1" />
+            <img src={grupo} className="header__logo2" />
+      </div>
+      <div class="imagen">
         <h1 className="header__text">
-          Gracias por participar en la Ruta de la Cuaresma 2021
+          Gracias por participar
         </h1>
-        <img src={grupo} className="header__logo" />
+        <h1>
+        Ruta de la Cuaresma 2021
+        </h1>
+        <h1 class="tex">"Conversión por las Huellas de Jesús de Nazaret"</h1>
       </div>
-      <h4>
-        A continuación, ingresa tu nombre para descargar tu insignia virtual
-      </h4>
-      <div className="controller-container">
-        <label class="input">
-          <input
-            type="text"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-            class="input__field"
-            placeholder=" "
-          />
-          <span class="input__label">Nombre</span>
-        </label>
-        <button className="download-button" onClick={() => handleDownload()}>
-          Descargar
+      </div>
+      
+      <h1 class="imagen">
+        Felicidades
+      </h1>
+      <h3 class="imagen">
+        Ha sido un día largo y cansado pero  gracias a tu esfuerzo has llegado a concluir nuetra primera caminata virtual. 
+      </h3>
+      <h3 class="imagen">
+        Ahora podras obtener su insignia
+      </h3>
+      <div class="centrar">
+        <div className="centrar ">
+          <label class="input">
+            <input
+              type="text"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              class="input__field"
+              placeholder="Ingrese su nombre "
+              
+            />
+          </label>
+          <br></br>
+          <button className="download-button" onClick={() => handleDownload()}>
+            Descargar
         </button>
+        </div>
       </div>
-      <img src={insignia} ref={imageRef} style={{ display: "none" }} />
-      <canvas ref={canvasRef} width={canvasSize} height={canvasSize} />
+
+      <div class="imagen">
+        <img src={insignia} ref={imageRef} style={{ display: "none" }} />
+        <canvas ref={canvasRef} width={canvasSize} height={canvasSize} />
+      </div>
+
     </div>
   );
 }

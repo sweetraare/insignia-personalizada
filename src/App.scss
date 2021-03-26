@@ -1,15 +1,8 @@
 body {
-  background: #8e2de2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #4a00e0,
-    #8e2de2
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4a00e0,
-    #8e2de2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #654ea3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 /* .container { */
@@ -22,7 +15,7 @@ body {
 :root {
   --color-light: white;
   --color-dark: #212121;
-  --color-signal: #fab700;
+  --color-signal: #e6be52;
 
   --color-background: var(--color-light);
   --color-text: var(--color-dark);
@@ -33,7 +26,7 @@ body {
 
   // line-height: 1.4;
 
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: calc(0.6rem + 0.4vw);
   color: var(--color-text);
   font-weight: 300;
@@ -61,7 +54,7 @@ h4 {
     white-space: nowrap;
     transform: translate(0, 0);
     transform-origin: 0 0;
-    background: var(--color-background);
+    background: var(-color-accent);
     transition: transform 120ms ease-in;
     font-weight: bold;
     line-height: 1.2;
@@ -70,7 +63,9 @@ h4 {
     color: var(--color-light);
     box-sizing: border-box;
     display: block;
-    width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
     border: 3px solid currentColor;
     padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
     background: transparent;
@@ -105,32 +100,60 @@ button {
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  max-width: 100vw;
-  max-height: 25vh;
-  align-items: center;
-  margin-bottom: 30px;
+width: 100%;
+position: relative;
+height: 600px;
+background-image: url("fondo.jpeg");
+background: #4568dc8a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b16ab388, #4568DC),url("fondo.jpeg");  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b16ab38a, #4568dc85),url("fondo.jpeg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  position: relative;
+
 }
 
-.header__logo {
-  width: 10%;
-  object-fit: fill;
+.header__logo1 {
+  display: absolute;
+  z-index: 1;
+  margin-top: 2%;
+  width: 20%;
   // height: 100%;
 }
+.header__logo2 {
+  display: absolute;
+  z-index: -1;
+  margin-left:59%;
+    width: 20%;
+    // height: 100%;
+  }
 
 .header__text {
-  flex: 3;
   width: 50%;
-  text-align: center;
+  font-size: 300%;
+  margin-top: -9%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 10%;
 }
 
+.tex{
+  width: 100%;
+  font-size: 300%;
+}
 .controller-container {
+  text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 80%;
 }
 
 .download-button {
   flex: 1;
+  width: 33%;
+  margin-left: 33%;
+  margin-right: 33%;
+}
+
+.imagen{
+  text-align: center;
 }
